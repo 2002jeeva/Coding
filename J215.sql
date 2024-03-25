@@ -1,0 +1,10 @@
+create database career;
+use career;
+create table company(company_id int primary Key,company_name varchar(50),location varchar(20));
+create table job(job_id int primary key,company_id int,job_title varchar(20),job_description varchar(20),job_location varchar(20),salary decimal(10,2),job_type varchar(20),poseted_date date);
+create table applicant(Applicant_id int primary key,first_name varchar(20),last_name varchar(20),email varchar(20),phone varchar(20),Resume varchar(20));
+create table jobapplicant(Application_id int primary Key,job_id int,applicant_id int,application_date varchar(20),cover_letter varchar(20));
+drop table job;
+drop table company;
+drop table applicant;
+drop table jobapplicant;
